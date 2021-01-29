@@ -5,10 +5,11 @@ let img1 = document.getElementsByClassName("img1");
 let img2 = document.getElementsByClassName("img2");
 let img3 = document.getElementsByClassName("img3");
 
+
 for(var i = 0; i < img_select1.length; i++){
-    btnAction(img_select1[i],i);
+    btnAction1(img_select1[i],i);
 }
-function btnAction(img_select1DOM,img_select1Id){
+function btnAction1(img_select1DOM,img_select1Id){
     img_select1DOM.addEventListener("click", function(){
         this.classList.add("img_border");
         for(var i = 0; i < img1.length; i++){
@@ -28,9 +29,9 @@ function btnAction(img_select1DOM,img_select1Id){
 
 
 for(var i = 0; i < img_select2.length; i++){
-    btn2Action(img_select2[i],i);
+    btnAction2(img_select2[i],i);
 }
-function btn2Action(img_select2DOM,img_select2Id){
+function btnAction2(img_select2DOM,img_select2Id){
     img_select2DOM.addEventListener("click", function(){
         this.classList.add("img_border");
         for(var i = 0; i < img2.length; i++){
@@ -50,9 +51,9 @@ function btn2Action(img_select2DOM,img_select2Id){
 
 
 for(var i = 0; i < img_select3.length; i++){
-    btn3Action(img_select3[i],i);
+    btnAction3(img_select3[i],i);
 }
-function btn3Action(img_select3DOM,img_select3Id){
+function btnAction3(img_select3DOM,img_select3Id){
     img_select3DOM.addEventListener("click", function(){
         this.classList.add("img_border");
         for(var i = 0; i < img3.length; i++){
