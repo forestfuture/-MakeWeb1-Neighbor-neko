@@ -1,9 +1,13 @@
 let img_select1 = document.getElementsByClassName("img_select1");
 let img_select2 = document.getElementsByClassName("img_select2");
 let img_select3 = document.getElementsByClassName("img_select3");
+let img_select4 = document.getElementsByClassName("img_select4");
+let img_select5 = document.getElementsByClassName("img_select5");
 let img1 = document.getElementsByClassName("img1");
 let img2 = document.getElementsByClassName("img2");
 let img3 = document.getElementsByClassName("img3");
+let img4 = document.getElementsByClassName("img4");
+let img5 = document.getElementsByClassName("img5");
 
 
 for(var i = 0; i < img_select1.length; i++){
@@ -71,5 +75,45 @@ function btnAction3(img_select3DOM,img_select3Id){
     });
 }
 
+for(var i = 0; i < img_select4.length; i++){
+    btnAction4(img_select4[i],i);
+}
+function btnAction4(img_select4DOM,img_select4Id){
+    img_select4DOM.addEventListener("click", function(){
+        this.classList.add("img_border");
+        for(var i = 0; i < img4.length; i++){
+            if(i == img_select4Id){
+                img4[i].classList.remove("d-none");
+            }else if(i != img_select4Id){
+                img4[i].classList.add("d-none");
+            }
+        }
+        for(var i = 0; i < img_select4.length; i++){
+            if(img_select4Id !== i){
+                img_select4[i].classList.remove("img_border");
+            }   
+        }
+    });
+}
 
+for(var i = 0; i < img_select5.length; i++){
+    btnAction5(img_select5[i],i);
+}
+function btnAction5(img_select5DOM,img_select5Id){
+    img_select5DOM.addEventListener("click", function(){
+        this.classList.add("img_border");
+        for(var i = 0; i < img5.length; i++){
+            if(i == img_select5Id){
+                img5[i].classList.remove("d-none");
+            }else if(i != img_select5Id){
+                img5[i].classList.add("d-none");
+            }
+        }
+        for(var i = 0; i < img_select5.length; i++){
+            if(img_select5Id !== i){
+                img_select5[i].classList.remove("img_border");
+            }   
+        }
+    });
+}
 
