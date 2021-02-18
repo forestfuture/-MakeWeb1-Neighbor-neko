@@ -11,6 +11,7 @@ document.getElementsByClassName("navbar-toggler")[0].addEventListener("click", f
       
 });
 
+
 // navItem
 window.addEventListener("load", function(){
     let navLink = document.getElementsByClassName("nav-link");
@@ -156,7 +157,7 @@ window.addEventListener("load", function(){
 window.addEventListener("scroll", function(){
     const demoScrollTop = document.getElementById("demoScrollTop");
     if(window.scrollY > 1500){
-        demoScrollTop.style.bottom = "20px"; 
+        demoScrollTop.style.bottom = "20px";
     }else{
         demoScrollTop.style.bottom = "-45px";
     }   
