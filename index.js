@@ -12,25 +12,22 @@ document.getElementsByClassName("navbar-toggler")[0].addEventListener("click", f
 });
 
 // navItem
-let navLink = document.getElementsByClassName("nav-link");
-let navLinkIcon = document.getElementsByClassName("nav-linkIcon");
-for(var i = 0; i < navLink.length; i++){
-    navLinkAction(navLink[i],i);
-}
+window.addEventListener("load", function(){
+    let navLink = document.getElementsByClassName("nav-link");
+    let navLinkIcon = document.getElementsByClassName("nav-linkIcon");
+    for(var i = 0; i < navLink.length; i++){
+        navLinkAction(navLink[i],i);
+    }
 
-function navLinkAction(navLinkDOM,navLinkId){
-    navLinkDOM.addEventListener("mouseover", function(){ 
-        navLinkIcon[navLinkId].setAttribute("transform", "rotate(-30)"); 
-    });
-    navLinkDOM.addEventListener("mouseleave", function(){
-        navLinkIcon[navLinkId].removeAttribute("transform", "rotate(-30)"); 
-    })    
-}
-
-
-
-
-
+    function navLinkAction(navLinkDOM,navLinkId){
+        navLinkDOM.addEventListener("mouseover", function(){ 
+            navLinkIcon[navLinkId].setAttribute("transform", "rotate(-30)"); 
+        });
+        navLinkDOM.addEventListener("mouseleave", function(){
+            navLinkIcon[navLinkId].removeAttribute("transform", "rotate(-30)"); 
+        })    
+    }
+});
 
 
 // imgセレクト
@@ -153,6 +150,21 @@ window.addEventListener("load", function(){
         });
     }
 });
+
+
+// TOPに戻るボタン
+window.addEventListener("scroll", function(){
+    const demoScrollTop = document.getElementById("demoScrollTop");
+    if(window.scrollY > 1500){
+        demoScrollTop.style.bottom = "20px"; 
+    }else{
+        demoScrollTop.style.bottom = "-45px";
+    }   
+});
+
+
+
+
 
 
 
